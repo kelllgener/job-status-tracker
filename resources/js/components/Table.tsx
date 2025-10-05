@@ -39,7 +39,6 @@ interface TableProps {
 
 const Table = ({ data, links, status, setFlashMessage }: TableProps) => {
     const [jobToDelete, setJobToDelete] = useState<number | null>(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const toHumanReadableDateTime = (dateString: string) => {
         const date = new Date(dateString);
         return date.toLocaleDateString('en-PH', {
