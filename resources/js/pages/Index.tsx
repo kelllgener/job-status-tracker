@@ -25,10 +25,17 @@ interface Job {
     created_at: string;
 }
 
+
+interface PaginationLink {
+    url: string | null;
+    label: string;
+    active: boolean;
+}
+
 interface IndexProps {
     jobList: {
         data: Job[];
-        links: any[];
+        links: PaginationLink[];
     };
     statuses: Status[];
 }
